@@ -31,8 +31,8 @@ public class VariableNamesTheme {
         System.out.println("Исходное число: " + originalNumber);
 
         // процент по вкладу
-        double depositProcent = 11.2;
-        System.out.println("Процент по вкладу: " + depositProcent + "%");
+        double depositPercent = 11.2;
+        System.out.println("Процент по вкладу: " + depositPercent + "%");
 
         // символ &
         char ampersand = '&';
@@ -87,12 +87,12 @@ public class VariableNamesTheme {
         System.out.println("Окончание диапазона: " + rangeEnd);
 
         // имя работника месяца
-        String topNamePerformerMonth = "Max Kazakov";
-        System.out.println("Работник месяца: " + topNamePerformerMonth);
+        String employeeOfTheMonth = "Max Kazakov";
+        System.out.println("Работник месяца: " + employeeOfTheMonth);
 
         // название электронной книги
-        String ebookName = "Java ";
-        System.out.println("Электронная книга: " + ebookName);
+        String ebookTitle = "Java ";
+        System.out.println("Электронная книга: " + ebookTitle);
 
         // размер
         String size = "L";
@@ -113,9 +113,8 @@ public class VariableNamesTheme {
         // количество чисел в строке
         int numbersInLine = 34;
         System.out.println("Количество чисел в строке: " + numbersInLine);
-        System.out.println();
 
-        System.out.println("2. BOOLEAN-ПЕРЕМЕННЫЕ");
+        System.out.println("\n2. BOOLEAN-ПЕРЕМЕННЫЕ");
 
         // сотни равны?
         boolean isEqualHundreds = false;
@@ -152,25 +151,24 @@ public class VariableNamesTheme {
         // имеются уникальные строки?
         boolean hasUniqueLines = true;
         System.out.println("Имеются уникальные строки? " + hasUniqueLines);
-        System.out.println();
 
-        System.out.println("3. АББРЕВИАТУРЫ ");
+        System.out.println("\n3. АББРЕВИАТУРЫ ");
 
         // старый universally unique identifier
         String oldUuid = "c6f8-8e9a-c6f8-8e9a";
         System.out.println("Старый UUID: " + oldUuid);
 
         // производитель оперативной памяти
-        String memoryManufacturer = "Kingston";
-        System.out.println("Производитель оперативной памяти: " + memoryManufacturer);
+        String ramManufacturer = "Kingston";
+        System.out.println("Производитель оперативной памяти: " + ramManufacturer);
 
         // емкость жесткого диска
         int hddCapacityGb = 1024;
         System.out.println("Ёмкость жёсткого диска (ГБ): " + hddCapacityGb);
 
         // определение термина протокола передачи гипертекста
-        String httpDefinition = "HyperText Transfer Protocol";
-        System.out.println("Определение HTTP: " + httpDefinition);
+        String httpFullForm = "HyperText Transfer Protocol";
+        System.out.println("Определение HTTP: " + httpFullForm);
 
         // сокращенный uniform resource locator
         String shortUrl = "bit.ly/qwe123";
