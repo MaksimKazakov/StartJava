@@ -87,8 +87,8 @@ public class VariableNamesTheme {
         System.out.println("Окончание диапазона: " + rangeEnd);
 
         // имя работника месяца
-        String employeeOfTheMonth = "Max Kazakov";
-        System.out.println("Работник месяца: " + employeeOfTheMonth);
+        String employeeMonth = "Max Kazakov";
+        System.out.println("Работник месяца: " + employeeMonth);
 
         // название электронной книги
         String ebookTitle = "Java ";
