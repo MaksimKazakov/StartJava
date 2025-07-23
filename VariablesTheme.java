@@ -14,14 +14,13 @@ public class VariablesTheme {
         System.out.println("   J   a a   v   v  /_( )\\");
         System.out.println("J  J  aaaaa   V V  /      \\");
         System.out.println(" JJ  a     a   V  /___/\\___\\");
-        System.out.println();
 
         String textBlock = """
-                       /\\
-                 J    /  \\  v     v  a
-                 J   /_( )\\  v   v  a a
-              J  J  /      \\  V V  aaaaa
-               JJ  /___/\\___\\  V  a     a
+                         /\\
+                   J    /  \\  v     v  a
+                   J   /_( )\\  v   v  a a
+                J  J  /      \\  V V  aaaaa
+                 JJ  /___/\\___\\  V  a     a
                 """;
         System.out.print(textBlock);
 
@@ -36,16 +35,16 @@ public class VariablesTheme {
         float discountedPrice = basePrice - discountAmount;
         System.out.println("Стоимость со скидкой: " + discountedPrice + " руб.");
 
-        BigDecimal pricePenRubBd = new BigDecimal("105.5");
-        BigDecimal priceBookRubBd = new BigDecimal("235.23");
-        BigDecimal discountPercentBd = new BigDecimal("11");
-        BigDecimal totalPriceRubBd = pricePenRubBd.add(priceBookRubBd);
-        System.out.println("\nОбщая стоимость без скидки: " + totalPriceRubBd + " руб.");
-        BigDecimal discountAmountRubBd = (totalPriceRubBd.multiply(discountPercentBd))
+        BigDecimal pricePenBd = new BigDecimal("105.5");
+        BigDecimal priceBookBd = new BigDecimal("235.23");
+        BigDecimal discountedPercentBd = new BigDecimal("11");
+        BigDecimal basePriceBd = pricePenBd.add(priceBookBd);
+        System.out.println("\nОбщая стоимость без скидки: " + basePriceBd + " руб.");
+        BigDecimal discountedAmountBd = (basePriceBd.multiply(discountedPercentBd))
                 .divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP);
-        System.out.println("Сумма скидки: " + discountAmountRubBd + " руб.");
-        BigDecimal discountedTotalPriceRubBd = totalPriceRubBd.subtract(discountAmountRubBd);
-        System.out.println("Стоимость со скидкой: " + discountedTotalPriceRubBd + " руб.");
+        System.out.println("Сумма скидки: " + discountedAmountBd + " руб.");
+        BigDecimal discountedBasePriceBd = basePriceBd.subtract(discountedAmountBd);
+        System.out.println("Стоимость со скидкой: " + discountedBasePriceBd + " руб.");
 
         System.out.println("\n3. ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         int a1 = 2;
@@ -53,9 +52,9 @@ public class VariablesTheme {
         System.out.println("Исходные значения: A1 = " + a1 + ", B1 = " + b1);
 
         // третья переменная
-        int c1 = a1;
+        int swap = a1;
         a1 = b1;
-        b1 = c1;
+        b1 = swap;
         System.out.println("\nМетод: третья переменная");
         System.out.println("Результат: A1 = " + a1 + ", B1 = " + b1);
 
@@ -82,9 +81,7 @@ public class VariablesTheme {
         int code5 = 1077;
         int code6 = 1090;
         System.out.printf("%-6d%-6d%-6d%-6d%-6d%-6d%n", code1, code2, code3, code4, code5, code6);
-        System.out.printf("%-6c%-6c%-6c%-6c%-6c%-6c%n",
-                code1, code2, code3,
-                code4, code5, code6);
+        System.out.printf("%-6c%-6c%-6c%-6c%-6c%-6c%n", code1, code2, code3, code4, code5, code6);
 
         System.out.println("\n5. АНАЛИЗ КОДА ТОВАРА");
         int productCode = 123;
@@ -167,7 +164,7 @@ public class VariablesTheme {
         String osDisk = System.getProperty("user.home").charAt(0) + ":";
         String osVersion = System.getProperty("os.name") + " " + System.getProperty("os.version");
         String javaVersion = System.getProperty("java.version");
-        String pathSeparator = System.getProperty("path.separator");
+        String pathSeparator = System.getProperty("file.separator");
 
         // Вывод характеристик ОС
         System.out.printf("""
@@ -183,7 +180,7 @@ public class VariablesTheme {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
         System.out.println("Старт проверки: " + startTime.format(formatter));
         System.out.println("Финиш проверки: " + endTime.format(formatter));
-        double timeSeconds = (endNano - startNano) / 1_000_000_000.0;
+        double timeSeconds = (endNano - startNano) / 1e9;
         System.out.printf("Время работы: %.3f сек\n", timeSeconds);
     }
 }
